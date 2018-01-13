@@ -1,0 +1,21 @@
+{
+    "name": "luojiangtao/blog",
+    "description": "aaphp php framework",
+    "keywords": ["aaphp", "framework", "php", "luojiangtao"],
+    "homepage": "http://www.aaphp.net/",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "luojiangtao",
+            "email": "1368761119@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "qcloud/cos-sdk-v5": ">=1.0",
+        "gregwar/captcha": "dev-master",
+        "luojiangtao/page": "dev-master",
+        "luojiangtao/upload": "dev-master"
+    }
+}
