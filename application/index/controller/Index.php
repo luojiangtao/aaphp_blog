@@ -15,6 +15,11 @@ use aaphp\Request;
  */
 class Index extends Controller
 {
+
+    public function test()
+    {
+        var_dump($_SERVER);
+    }
     /**
      * 首页
      */
