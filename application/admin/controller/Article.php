@@ -197,7 +197,7 @@ class Article extends Base
         }
 
         // 回到列表页
-        $this->redirect(Url::build('admin/Article/article_list'));
+        $this->redirect(Url::build('admin/Article/articleList'));
     }
 
     /**
@@ -259,7 +259,7 @@ class Article extends Base
         }
 
         // 回到列表页
-        $this->redirect(Url::build('admin/Article/article_list'));
+        $this->redirect(Url::build('admin/Article/articleList'));
     }
 
     /**
