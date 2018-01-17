@@ -61,8 +61,8 @@ class Page
         // 用于分页sql用  M('article')->limit($Page->now_page-1.','.$Page->listRows)->select();
         $this->limit_page = $this->now_page - 1;
         $this->next_page  = $this->now_page + 1;
-        $this->url        = $_SERVER['REQUEST_URI'] . '?' . $_SERVER['QUERY_STRING'];
-        $this->url        = preg_replace("/&p=.*/i", '', $this->url);
+        $this->url        = $_SERVER['REQUEST_URI'];
+        $this->url        = preg_replace("/[&|\?]p=\d+?/i", '', $this->url);
 
         $this->number_start = $this->now_page - $this->number_show;
         $this->number_end = $this->now_page + $this->number_show;
@@ -83,6 +83,18 @@ class Page
             }
         }
 
+    }
+
+    /**
+     * 创建get传参字符串
+     */
+    public function createParam()
+    {
+        if(strpos($_SERVER['REQUEST_URI'],'?')){
+            return '&p=';
+        }else{
+            return '?p=';
+        }
     }
 
     /**
@@ -135,7 +147,7 @@ class Page
 
         // 上一页
         if ($this->pre_page > 0) {
-            $pre_page_url = $this->url . '&p=' . $this->pre_page;
+            $pre_page_url = $this->url . $this->createParam() . $this->pre_page;
             $page_html .= "<a class='page' href='" . $pre_page_url . "'>«</a>";
         }else{
             $page_html .= "<a class='page-disable'>«</a>";
@@ -143,17 +155,17 @@ class Page
 
         for($i=$this->number_start;$i<=$this->number_end;$i++){
             if($i==$this->now_page){
-                $pre_page_url = $this->url . '&p=' . $i;
+                $pre_page_url = $this->url . $this->createParam() . $i;
                 $page_html .= "<a class='page now-page' href='" . $pre_page_url . "'>$i</a>";
             }else{
-                $pre_page_url = $this->url . '&p=' . $i;
+                $pre_page_url = $this->url . $this->createParam() . $i;
                 $page_html .= "<a class='page' href='" . $pre_page_url . "'>$i</a>";
             }
         }
 
         // 下一页
         if ($this->next_page <= $this->totol_page) {
-            $next_page_url = $this->url . '&p=' . $this->next_page;
+            $next_page_url = $this->url . $this->createParam() . $this->next_page;
             $page_html .= "<a class='page' href='" . $next_page_url . "'>»</a>";
         }else{
             $page_html .= "<a class='page-disable'>»</a>";
@@ -161,7 +173,7 @@ class Page
 
         // 尾页
         if ($this->now_page < $this->totol_page) {
-            $last_page = $this->url . '&p=' . $this->totol_page;
+            $last_page = $this->url . $this->createParam() . $this->totol_page;
             $page_html .= "<a class='page last-page' href='" . $last_page . "'>尾页</a>";
         }else{
             $page_html .= "<a class='last-page page-disable' >尾页</a>";
@@ -172,3 +184,8 @@ class Page
         return $page_html;
     }
 }
+
+//var_dump($_GET);
+//$page = new Page(100, 10);
+//echo $page->show();
+//var_dump($_SERVER);

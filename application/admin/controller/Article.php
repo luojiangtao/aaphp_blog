@@ -17,14 +17,6 @@ use luojiangtao\upload\Upload;
  */
 class Article extends Base
 {
-    public function test()
-    {
-        $builder = new CaptchaBuilder;
-        $builder->build();
-        header('Content-type: image/jpeg');
-        $builder->output();
-    }
-
     /**
      * 文章列表
      */

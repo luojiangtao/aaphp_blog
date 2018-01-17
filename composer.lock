@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/luojiangtao/page.git",
-                "reference": "6ca0a011d3c7aeec92156dcfe483294ab14210e1"
+                "reference": "06cc13d2f759b76bc7009382bae016d63a7af1e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/luojiangtao/page/6ca0a011d3c7aeec92156dcfe483294ab14210e1.zip",
-                "reference": "6ca0a011d3c7aeec92156dcfe483294ab14210e1",
+                "url": "https://files.phpcomposer.com/files/luojiangtao/page/06cc13d2f759b76bc7009382bae016d63a7af1e4.zip",
+                "reference": "06cc13d2f759b76bc7009382bae016d63a7af1e4",
                 "shasum": ""
             },
             "type": "library",
@@ -37,7 +37,7 @@
                 }
             ],
             "description": "page for aaphp frame work",
-            "time": "2018-01-17T03:15:30+00:00"
+            "time": "2018-01-17T03:51:29+00:00"
         },
         {
             "name": "luojiangtao/upload",

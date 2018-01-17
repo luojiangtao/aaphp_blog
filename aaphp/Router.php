@@ -98,8 +98,9 @@ class Router
 //        去掉index.php
         $scriptName = str_replace('/index.php','',$_SERVER['SCRIPT_NAME']);
         $pathInfo = str_replace($scriptName,'',$_SERVER['REQUEST_URI']);
+//        去掉 ?p=1 方式的get传参
+        $pathInfo       = preg_replace("/\?.*/i", '', $pathInfo);
         $pathInfo = ltrim($pathInfo, '/');
-
         return $pathInfo;
     }
 
