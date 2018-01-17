@@ -53,6 +53,6 @@ class Comment extends Base
         // 删除
         (new Model('comment'))->where($where)->delete();
         // 回到列表页
-        $this->redirect(Url::build('admin/Comment/comment_list'));
+        $this->redirect(Url::build('admin/Comment/commentList'));
     }
 }
