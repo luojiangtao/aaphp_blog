@@ -86,7 +86,7 @@
                         </h3>
                     </div>
                     <div id="respond">
-                        <form id="comment-form" name="comment-form" action="{:aaphp\Url::build('Index/Comment/createComment')}" method="POST">
+                        <form id="comment-form" name="comment-form" action="{:aaphp\Url::build('index/Comment/createComment')}" method="POST">
                             <input type="hidden" name="article_id" value="{:aaphp\Request::instance()->request('article_id')}">
                             <!--csrf验证-->
                             <input type="hidden" name="_token_" value="{:aaphp\Validate::token()}"/>

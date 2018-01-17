@@ -165,7 +165,7 @@ function ajax_get_article_list(){
     // 获取文章列表
         $.ajax({
             type:"post",
-            url:"{:aaphp\Url::build('Index/Index/ajaxGetArticleList')}",
+            url:"{:aaphp\Url::build('index/Index/ajaxGetArticleList')}",
             dataType : "json",
             data : {
                 'page': page,
@@ -179,7 +179,7 @@ function ajax_get_article_list(){
                     for( var i = 0; i < list.length; i++ )
                     {
                         /*组装数据*/
-                        var article_detail_url = "{:aaphp\Url::build('Article/articleDetail')}";
+                        var article_detail_url = "{:aaphp\Url::build('index/Article/articleDetail')}";
                         article_detail_url = article_detail_url+"/article_id/"+list[i].article_id;
 
                         article_list_vue.todos.push({
