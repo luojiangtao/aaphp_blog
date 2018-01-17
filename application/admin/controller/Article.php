@@ -45,10 +45,9 @@ class Article extends Base
         // 获取文章
         $article = (new Model('article'))->order('article_id DESC')->where($where)->limit($page->start_row . ',' . $page->page_size)->select();
 
-        // 实例化分类数据库类
-        $categoryModel = new Model('category');
-        $commentModel = new Model('comment');
         foreach ($article as $key => $value) {
+            $categoryModel = new Model('category');
+            $commentModel = new Model('comment');
             $article[$key]['category_name'] = $categoryModel->where(['category_id', '=', $value['category_id']])->getField('category_name');
             $article[$key]['comment_number'] = $commentModel->where(['article_id', '=', $value['article_id']])->count();
         }
@@ -81,10 +80,9 @@ class Article extends Base
         $model = new Model('article');
         $article = $model->order('article_id DESC')->where($where)->limit($page->start_row . ',' . $page->page_size)->select();
 
-        // 实例化分类数据库类
-        $categoryModel = new Model('category');
-        $commentModel = new Model('comment');
         foreach ($article as $key => $value) {
+            $categoryModel = new Model('category');
+            $commentModel = new Model('comment');
             $article[$key]['category_name'] = $categoryModel->where(['category_id', '=', $value['category_id']])->getField('category_name');
             $article[$key]['comment_number'] = $commentModel->where(['article_id', '=', $value['article_id']])->count();
         }

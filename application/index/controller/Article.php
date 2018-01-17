@@ -6,6 +6,7 @@ use aaphp\Controller;
 use aaphp\Database;
 use aaphp\Model;
 use aaphp\Request;
+use aaphp\Url;
 
 /**
  * 首页，文章控制器
@@ -29,8 +30,8 @@ class Article extends Controller
         // 获取文章详情
         $article = (new Model('article'))->where($where)->selectOne();
         if (!$article) {
-            return $this->__empty();
-
+            // 404
+            $this->redirect(Url::build('index/Index/notFound'));
         }
         $article['category_name'] = (new Model('category'))->where(['category_id', '=', $article['category_id']])->getField('category_name');
         $article['comment_number'] = (new Model('comment'))->where(['article_id', '=', $article_id])->count();
