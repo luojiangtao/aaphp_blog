@@ -5,9 +5,7 @@ namespace application\index\controller;
 use aaphp\Controller;
 use aaphp\Model;
 use aaphp\Request;
-use aaphp\Url;
 use application\index\validate\CommentValidate;
-use Gregwar\Captcha\CaptchaBuilder;
 
 /**
  * 首页，评论控制器
@@ -21,18 +19,15 @@ class Comment extends Controller
      */
     public function createComment()
     {
-        $captcha = Request::instance()->request('captcha');
         $articleId = Request::instance()->request('article_id');
-
-        if ($captcha != $_SESSION['captcha']) {
-            $this->redirect(__ROOT__ . '/' . $articleId . '.html?errorMessage=验证码不正确');
-            return;
-        }
+        $request = Request::instance();
         $comment = array(
             'article_id' => $articleId,
-            'nickname' => Request::instance()->request('nickname'),
-            'email' => Request::instance()->request('email'),
-            'content' => Request::instance()->request('content'),
+            'nickname' => $request->request('nickname'),
+            'email' => $request->request('email'),
+            'content' => $request->request('content'),
+//            csrf验证
+            '_token_' => $request->post('_token_'),
             'time' => time(),
         );
 
@@ -45,6 +40,8 @@ class Comment extends Controller
             return;
         }
 
+        unset($comment['_token_']);
+
         // 添加
         (new Model('comment'))->insert($comment);
 
@@ -52,15 +49,4 @@ class Comment extends Controller
         $this->redirect(__ROOT__ . '/' . $articleId . '.html');
     }
 
-    /**
-     * 验证码
-     */
-    public function captcha()
-    {
-        $builder = new CaptchaBuilder;
-        $builder->build(130, 34);
-        header('Content-type: image/jpeg');
-        $builder->output();
-        $_SESSION['captcha'] = $builder->getPhrase();
-    }
 }

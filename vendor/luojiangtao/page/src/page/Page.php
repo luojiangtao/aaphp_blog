@@ -3,7 +3,9 @@
 namespace luojiangtao\page;
 
 /**
- *
+ * 分页
+ * Class Page
+ * @package luojiangtao\page
  */
 class Page
 {
@@ -32,7 +34,12 @@ class Page
     // 显示多少个数字分页 如$number_show=2那么页面上显示就是[首页] [上页] 1 2 3 4 5 [下页] [尾页]
     private $number_show=2;
 
-
+    /**
+     * 构造方法
+     * Page constructor.
+     * @param integer $count [数据总条数]
+     * @param integer $page_size [每页多少条]
+     */
     public function __construct($count, $page_size)
     {
         if(!$count){
@@ -78,6 +85,10 @@ class Page
 
     }
 
+    /**
+     * 获取分页html代码
+     * @return string [分页html代码]
+     */
     public function show()
     {
         if(!$this->count){

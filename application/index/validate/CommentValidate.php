@@ -37,6 +37,9 @@ class CommentValidate extends Validate
 //            长度必须 在 5-100 之间
             'length' => [5, 100],
         ],
+        '_token_' => [
+            'token',
+        ],
     ];
 
 //    用户自定义错误信息

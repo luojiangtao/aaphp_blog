@@ -99,7 +99,7 @@ class Router
         $scriptName = str_replace('/index.php','',$_SERVER['SCRIPT_NAME']);
         $pathInfo = str_replace($scriptName,'',$_SERVER['REQUEST_URI']);
         $pathInfo = ltrim($pathInfo, '/');
-        
+
         return $pathInfo;
     }
 
