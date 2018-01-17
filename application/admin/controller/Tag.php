@@ -55,6 +55,6 @@ class Tag extends Base
         // 删除关系
         (new Model('article_tag'))->where($where)->delete();
         // 回到列表页
-        $this->redirect(Url::build('admin/Tag/tag_list'));
+        $this->redirect(Url::build('admin/Tag/tagList'));
     }
 }
