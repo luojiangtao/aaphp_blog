@@ -1,8 +1,7 @@
-Ð¡Öí°Ë½ä²©¿Í
-×÷Õß£ºÂÞ½­ÌÎ
+## åŸºäºŽAAPHPå¼€å‘çš„ä¸ªäººåšå®¢
 
-Ê¹ÓÃ£º
-1£¬½«blog.sqlµ¼ÈëÊý¾Ý¿â
-2£¬´ò¿ª/Application/Common/Config/config.php£¬ÌîÐ´ÕýÈ·µÄÊý¾Ý¿âÐÅÏ¢
-3£¬·ÃÎÊ¸ùÄ¿Â¼index.php£¬½øÈëÇ°Ì¨
-4£¬·ÃÎÊ¸ùÄ¿Â¼index.php/index.php/Admin£¬½øÈëºóÌ¨¹ÜÀí
+å®‰è£…æ­¥éª¤
+1ï¼Œå¯¼å…¥blog.sql
+2ï¼Œä¿®æ”¹/config/database.php
+3ï¼Œè®¿é—®å‰å°é¦–é¡µ localhost/index.php
+4ï¼Œè®¿é—®åŽå°é¦–é¡µ localhost/index.php/a
