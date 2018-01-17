@@ -129,6 +129,19 @@ class View
         return $content;
     }
 
+    /**
+     * xss 过滤
+     * @param $value
+     * @return string
+     */
+    public static function xssFilter($value)
+    {
+        if(Config::common('xss_filter')){
+            $value = htmlspecialchars($value);
+        }
+        return $value;
+    }
+
     /*-------------------------以下为解析方法--------------------------------*/
 
     /**
@@ -167,7 +180,7 @@ class View
     {
         // 普通变量 {$name}
         $preg = '/\{\$(.+?)\}/';
-        $rep = '<?php echo isset($$1) ? $$1 : \'\'; ?>';
+        $rep = '<?php echo isset($$1) ? aaphp\View::xssFilter($$1) : \'\'; ?>';
         // 标签替换，替换所有 {} 包含的内容
         $html = preg_replace($preg, $rep, $html);
 
@@ -333,24 +346,6 @@ class View
             preg_match($preg, $html, $match);
             $include = empty($match[2]) ? '' : $match[2];
             if (!empty($include)) {
-//                $suffix = strrchr($include, '.');
-//                // 默认.html
-//                $include      = empty($suffix) ? $include . '.html' : $include;
-//
-//                $request=Request::instance();
-//                $mudule=$request->getMudule();
-//                $controller=$request->getController();
-////                $action=$request->getAction();
-//
-////        只包含一个 / 表示 只有方法名
-//                if(0 == substr_count($include,'/')){
-//                    $include = $controller .'/'.$include;
-//                }
-//                if(1 == substr_count($include,'/')){
-//                    $include = $mudule .'/'.$include;
-//                }
-//
-//                $include      = APPLICATION_PATH . '/'. $mudule . '/view/' . $controller . '/'  . $include;
                 $include_file = file_get_contents($include);
                 echo $include_file;
                 // 标签替换
