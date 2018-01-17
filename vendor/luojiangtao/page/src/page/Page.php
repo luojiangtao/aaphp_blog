@@ -61,7 +61,7 @@ class Page
         // 用于分页sql用  M('article')->limit($Page->now_page-1.','.$Page->listRows)->select();
         $this->limit_page = $this->now_page - 1;
         $this->next_page  = $this->now_page + 1;
-        $this->url        = $_SERVER['PHP_SELF'] . '?' . $_SERVER['QUERY_STRING'];
+        $this->url        = $_SERVER['REQUEST_URI'] . '?' . $_SERVER['QUERY_STRING'];
         $this->url        = preg_replace("/&p=.*/i", '', $this->url);
 
         $this->number_start = $this->now_page - $this->number_show;

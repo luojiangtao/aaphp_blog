@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "71b005ec4137a22a5f46753455d5bdab",
+    "content-hash": "25792a5dc1ddd56dfee0f08095532437",
     "packages": [
         {
             "name": "luojiangtao/page",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/luojiangtao/page.git",
-                "reference": "e5fdac08acb83e9e79302b17f295bd95251d753a"
+                "reference": "6ca0a011d3c7aeec92156dcfe483294ab14210e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/luojiangtao/page/e5fdac08acb83e9e79302b17f295bd95251d753a.zip",
-                "reference": "e5fdac08acb83e9e79302b17f295bd95251d753a",
+                "url": "https://files.phpcomposer.com/files/luojiangtao/page/6ca0a011d3c7aeec92156dcfe483294ab14210e1.zip",
+                "reference": "6ca0a011d3c7aeec92156dcfe483294ab14210e1",
                 "shasum": ""
             },
             "type": "library",
@@ -37,7 +37,7 @@
                 }
             ],
             "description": "page for aaphp frame work",
-            "time": "2018-01-04T09:23:50+00:00"
+            "time": "2018-01-17T03:15:30+00:00"
         },
         {
             "name": "luojiangtao/upload",
@@ -77,8 +77,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "luojiangtao/page": 20,
-        "luojiangtao/upload": 20
+        "luojiangtao/upload": 20,
+        "luojiangtao/page": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
