@@ -79,7 +79,7 @@ class Index extends Controller
         }
 
         // 获取文章
-        $article = (new Model('article'))->where($where)->field(['article_id', 'title', 'time', 'image', 'category_id', 'click_number'])->order('article_id DESC')->limit("{$page},2")->select();
+        $article = (new Model('article'))->where($where)->field(['article_id', 'title', 'summary', 'time', 'image', 'category_id', 'click_number'])->order('article_id DESC')->limit("{$page},2")->select();
         if (!$article) {
             $result = array(
                 'status' => 0,
