@@ -41,15 +41,15 @@
         "source": {
             "type": "git",
             "url": "https://github.com/luojiangtao/page.git",
-            "reference": "06cc13d2f759b76bc7009382bae016d63a7af1e4"
+            "reference": "6b009f384dc9969e94924788480cba0d961f627c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://files.phpcomposer.com/files/luojiangtao/page/06cc13d2f759b76bc7009382bae016d63a7af1e4.zip",
-            "reference": "06cc13d2f759b76bc7009382bae016d63a7af1e4",
+            "url": "https://files.phpcomposer.com/files/luojiangtao/page/6b009f384dc9969e94924788480cba0d961f627c.zip",
+            "reference": "6b009f384dc9969e94924788480cba0d961f627c",
             "shasum": ""
         },
-        "time": "2018-01-17T03:51:29+00:00",
+        "time": "2018-01-17T07:41:27+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {

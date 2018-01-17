@@ -63,7 +63,7 @@ class CarouselFigure extends Base
         (new Model('carousel_figure'))->insert($carouselFigure);
 
         // 回到列表页
-        $this->redirect(Url::build('admin/CarouselFigure/carousel_figure_list'));
+        $this->redirect(Url::build('admin/CarouselFigure/carouselFigureList'));
     }
 
     /**
@@ -100,7 +100,7 @@ class CarouselFigure extends Base
         (new Model('carousel_figure'))->where(['carousel_figure_id', '=', $carouselFigureId])->update($carouselFigure);
 
         // 回到列表页
-        $this->redirect(Url::build('admin/CarouselFigure/carousel_figure_list'));
+        $this->redirect(Url::build('admin/CarouselFigure/carouselFigureList'));
     }
 
     /**
@@ -125,6 +125,6 @@ class CarouselFigure extends Base
         (new Model('carousel_figure'))->where($where)->delete();
 
         // 回到列表页
-        $this->redirect(Url::build('admin/CarouselFigure/carousel_figure_list'));
+        $this->redirect(Url::build('admin/CarouselFigure/carouselFigureList'));
     }
 }

@@ -62,7 +62,10 @@ class Page
         $this->limit_page = $this->now_page - 1;
         $this->next_page  = $this->now_page + 1;
         $this->url        = $_SERVER['REQUEST_URI'];
-        $this->url        = preg_replace("/[&|\?]p=\d+?/i", '', $this->url);
+        $this->url        = preg_replace("/p=\d+?&?/i", '', $this->url);
+        $this->url        = rtrim($this->url,'&');
+        $this->url        = rtrim($this->url,'?');
+//        var_dump($this->url);
 
         $this->number_start = $this->now_page - $this->number_show;
         $this->number_end = $this->now_page + $this->number_show;
@@ -86,11 +89,12 @@ class Page
     }
 
     /**
-     * 创建get传参字符串
+     * 创建分页url参数
+     * @return string
      */
     public function createParam()
     {
-        if(strpos($_SERVER['REQUEST_URI'],'?')){
+        if(strpos($this->url,'?')){
             return '&p=';
         }else{
             return '?p=';
