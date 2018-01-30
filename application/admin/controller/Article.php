@@ -6,7 +6,6 @@ use aaphp\Database;
 use aaphp\Model;
 use aaphp\Request;
 use aaphp\Url;
-use Gregwar\Captcha\CaptchaBuilder;
 use luojiangtao\page\Page;
 use luojiangtao\upload\Upload;
 
