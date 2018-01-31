@@ -34,5 +34,4 @@ class _2017_12_02_03_32_50_create_test extends Migration
         $sql="DROP table `{$this->prefix}test`";
         $this->execute($sql);
     }
-
 }

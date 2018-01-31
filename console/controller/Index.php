@@ -1,7 +1,8 @@
 <?php
+
 namespace console\controller;
+
 use aaphp\Controller;
-use application\example\model\User;
 
 /**
  * 命令行模式

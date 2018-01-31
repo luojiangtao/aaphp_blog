@@ -25,7 +25,6 @@ return [
     'save_log'            => true,
     // 是否开启缓存
     'is_cache'            => true,
-
-    // 默认文件上传路径
-    'upload_path'           => 'upload',
+    // xss 安全处理
+    'xss_filter'           => true,
 ];
