@@ -76,7 +76,6 @@ class View
         }
 
         if (!is_file($viewPath)) {
-            var_dump($viewPath);
             Error::halt('模版文件不存在：' . $viewPath);
         }
 
@@ -347,7 +346,6 @@ class View
             $include = empty($match[2]) ? '' : $match[2];
             if (!empty($include)) {
                 $include_file = file_get_contents($include);
-                echo $include_file;
                 // 标签替换
                 $html = preg_replace($preg, $include_file, $html, 1);
             }

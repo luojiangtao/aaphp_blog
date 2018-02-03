@@ -6,7 +6,6 @@ use aaphp\Model;
 use aaphp\Request;
 use aaphp\Url;
 
-
 /**
  * 后台首页控制器
  * Class Index

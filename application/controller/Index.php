@@ -10,15 +10,30 @@ use aaphp\Controller;
  * Class ViewController
  * @package application\example\controller
  */
-class IndexController extends Controller
+class Index extends Controller
 {
+    /**
+     * 首页
+     * @return string
+     */
     public function index()
     {
         return $this->fetch();
     }
 
+    /**
+     * 测试
+     */
     public function test()
     {
         var_dump('test');
+    }
+
+    /**
+     * 404 没有找到控制器或方法时执行
+     */
+    public function notFound()
+    {
+        return $this->fetch();
     }
 }

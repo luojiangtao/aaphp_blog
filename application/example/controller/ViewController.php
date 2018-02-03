@@ -60,7 +60,7 @@ class ViewController extends Controller
     }
 
     /**
-     * 引入头部和底部，
+     * 引入头部和底部
      * 视图文件位置: /application/example/view/ViewController/includeExample.html
      * @return string
      */

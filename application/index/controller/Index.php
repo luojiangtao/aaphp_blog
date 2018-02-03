@@ -20,6 +20,7 @@ class Index extends Controller
     {
         var_dump($_SERVER);
     }
+
     /**
      * 首页
      */
@@ -123,7 +124,7 @@ class Index extends Controller
     }
 
     /**
-     * 空方法 没有找到方法时执行
+     * 404 没有找到控制器或方法时执行
      */
     public function notFound()
     {
