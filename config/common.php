@@ -26,5 +26,5 @@ return [
     // 是否开启缓存
     'is_cache'            => true,
     // xss 安全处理
-    'xss_filter'           => true,
+    'xss_filter'           => false,
 ];
