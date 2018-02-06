@@ -1,24 +1,18 @@
-# AAPHP——简洁、高效、安全的PHP框架
+# aaphp_blog——基于AAPHP开发的个人博客
 
 ### 在线文档：[aaphp.net](http://aaphp.net)
 
-### 主要特性
-* 上手容易-最容易上手的PHP框架，没有之一
-* 设计简洁-框架本着大道至简原则设计，拒绝任何繁琐的操作
-* 案例丰富-框架已提供丰富的例子，确保快速上手
-* 注释详细-框架源码和案例都有详细中文注释
-* 高效-性能是Laravel的15.62倍，Yii2的4.76倍，Thinkphp5的3.35倍
-* 安全-sql注入保护，xss过滤，csrf防御
-* 遵循MVC设计模式
-* 完全按需加载
-* 支持composer包管理和自动加载
-* 支持PHP7
+### 安装
+* 将项目放入web环境
+* 新建数据库，导入blog.sql
+* 导入blog.sql
+* 修改 config/database.php
 
-> 框架内置完整例子，能大大降低学习成本，详情请阅读 ./application/example/ 源码
-
-### 版权申明
-* AAPHP 开源、免费。
-* 如果AAPHP框架能为您的工作和学习带来帮助，在下倍感荣幸
+### 访问
+* 前台：localhost/aaphp_blog/index.php
+* 后台：localhost/aaphp_blog/index.php/a
+* 后台帐号：admin
+* 后台密码：admin
 
 ### 作者信息
 * 姓名：罗江涛

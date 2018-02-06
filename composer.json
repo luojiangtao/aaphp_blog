@@ -2,7 +2,7 @@
     "name": "luojiangtao/blog",
     "description": "aaphp php framework",
     "keywords": ["aaphp", "framework", "php", "luojiangtao"],
-    "homepage": "http://www.aaphp.net/",
+    "homepage": "http://aaphp.net/",
     "type": "project",
     "license": "MIT",
     "authors": [
