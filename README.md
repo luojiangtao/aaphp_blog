@@ -1,5 +1,7 @@
 # aaphp_blog——基于AAPHP开发的个人博客
 
+### 在线演示：[luojiangtao.com](http://luojiangtao.com)
+
 ### 在线文档：[aaphp.net](http://aaphp.net)
 
 ### 安装
